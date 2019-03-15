@@ -1,0 +1,5 @@
+<!--pages/personal/help/help.wxml-->
+<view>
+暨知是信息科学技术学院在校学生打造的一款基于人工智能的校园助手APP，力争能够帮助学生解决各种问题。来和小知一起玩耍吧~
+</view>
+<image src="https://www.zhxy.xyz/img/center/robot.png"></image>

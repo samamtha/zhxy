@@ -1,0 +1,11 @@
+<!--pages/personal/personal.wxml-->
+
+<view class="info">
+  <image src="{{userInfo.avatarUrl}}"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+<view wx:for="{{my}}" wx:key="id" id="{{item.id}}" class="feature" bindtap="navTo" style="background-color: {{item.bgc}}" bind:touchstart="itemTouch" bind:touchend="itemTouchend">
+  <image src="{{commonURL}}{{item.imgURL}}"></image>
+  <text>{{item.nav}}</text>
+  <view></view>
+</view>

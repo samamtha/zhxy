@@ -1,0 +1,53 @@
+/* pages/personal/personal.wxss */
+page {
+  font-size: 15px;
+  background-color: #f0f0f0;
+}
+.info {
+  height: 80px;
+  margin: 10px 0;
+  padding-left: 30px;
+  line-height: 80px;
+  background-color: #fdfdfd;
+  vertical-align: middle;
+}
+.info image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  vertical-align: middle;
+} 
+.info text , .feature text {
+  padding-left: 20px;
+  letter-spacing:1px;
+  vertical-align: middle;
+}
+.feature {
+  position: relative;
+  height: 50px;
+  padding-left: 30px;
+  margin: 3px 0;
+  line-height: 50px;
+  vertical-align: middle;
+}
+.feature image {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+.feature view {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  height: 6px;
+  margin: auto 0;
+  border-top: 3px solid #ddd;
+  border-right: 3px solid #ddd;
+  border-radius: 1px;
+  transform:rotate(45deg);
+}
+#help{
+  margin-top: 10px;
+}

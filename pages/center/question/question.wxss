@@ -1,0 +1,23 @@
+/* pages/personal/question/question.wxss */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 96%;
+  margin: 0 auto;
+}
+.header view {
+  display: inline-block;
+  width: 50%;
+  font-size: 20px;
+  text-align: center;
+}
+.header view text {
+  display: inline-block;
+  padding: 5px 10px;
+}
+.active {
+  color: #00bfff;
+  border-bottom: 2px solid #00bfff;
+}

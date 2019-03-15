@@ -1,0 +1,7 @@
+<scroll-view scroll-x='true' scroll-y='true'  scroll-top="{{firstTop}}" scroll-left="{{toView}}" bindtouchstart="touchstartCallback"  bindtouchmove="touchmoveCallback" bindtouchend="touchendCallback" style="zoom:{{stv.scale}};">
+  <image class="background"   src="{{commonURL}}map.jpg"></image>
+  <image class="icon" id="icon"  src="{{commonURL}}icon.png" style="top:{{top}};left:{{left}};"></image>
+</scroll-view>     
+<view bindtap="focus"><image class="focus" src="{{commonURL}}focus.png" /></view>
+
+

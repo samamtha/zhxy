@@ -1,0 +1,19 @@
+<!--pages/personal/question/question.wxml-->
+<view class="header">
+  <view class="h-question">
+    <text class="{{active ? 'active' : ''}}" bindtap="question">我的问题</text>
+  </view>
+  <view chass="h-answer">
+    <text class="{{active ? '' : 'active'}}" bindtap="answer">我的回答</text>
+  </view>
+</view>
+<scroll-view class="body" scroll-y="true" bind:scrolltolower="lower" lower-threshold="20px">
+    <view wx:if="{{active}}" class="b-question" wx:for-items="{{ displaylist }}" bindtap="toQuestion" id="{{ index }}" wx:key="index">
+      <view class="page-content-item-title">{{ item.title }}</view>
+      <view class="page-content-item-date">{{ item.date }}</view>
+    </view>
+    <view class="page-content-item page-content-loading" style="{{ isLoading ? '' : 'display: none;'}}">
+      <image src="https://www.zhxy.xyz/img/notice/loadingIcon.gif" />
+    </view>
+    <view class="page-content-loading-info" style="{{ noMoreFlag ? '' : 'display: none;'}}" >没有更多的信息了</view>
+  </scroll-view>

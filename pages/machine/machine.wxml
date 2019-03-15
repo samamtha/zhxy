@@ -1,0 +1,27 @@
+<!--消息板块-->  
+<scroll-view class="box" scroll-y="true" scroll-top="{{scrollTop}}" style="height:{{windowHeight}}px" android:windowSoftInputMode="adjustUspecified" >                  
+	<scroll-view class="containerBox" scroll-y="true">
+	  <scroll-view wx:key="{{index}}" wx:for="{{allContentList}}" class="content">
+
+        <view id="{{index}}" bindtap="changeIntroduce">
+		      <image class="{{item.state}}-poto" src="{{item.src}}" background-size="cover"></image>
+		    </view>
+		    <view class="{{item.state}}-msg" style="max-width:{{msgWidth}};">
+			    {{item.value}}
+          <view></view>
+		    </view>   
+
+	  </scroll-view>
+	</scroll-view>  
+</scroll-view>
+<!--输入板块-->
+<view class="handleBox" style="bottom:{{handleBoxBottom}}px;">
+	  <input class="input_submit" value="{{inputTemp}}" confirm-hold="true" focus="{{focus}}" adjust-position="{{false}}" bindinput="bindKeyInput" bindconfirm="submitTo" cursor-spacing="12" bindfocus="focus" bindblur="blur" /> 
+	<view bindtap="submitTo" >
+		<image src="{{img}}" class="img_submit" ></image>
+	</view>
+</view>
+<!--机器人介绍-->
+<view wx:if="{{introduce=='true'}}" bindtap='changeIntroduce'>
+	<image src="https://www.zhxy.xyz/img/machine/robotIfo.png" class="introduce" ></image>
+</view>

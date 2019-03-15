@@ -1,0 +1,107 @@
+.handleBox {
+    position: fixed;
+    width:100%;
+    height: 9%;
+    padding-top: 5px;
+    background-color: #f0f0f0;
+    border-top:1px solid #ddd;
+    box-sizing: border-box;
+}
+.box{
+  background-color: #d9d9d9;
+}
+.introduce{
+  position:fixed;  
+  top:6%;
+  width:80%;
+  height:80%;
+  margin:0 10%;
+}
+ .containerBox{
+    /* display: flex;
+    flex-direction:column; */
+    /* width: 100%; */
+    background-color: #d9d9d9;   
+}
+.textBox{
+display:block;
+max-width: 82%;
+padding: 0 5px;
+margin:15px 10px 5px;
+font-size:13px;
+line-height: 26px;
+text-align: left;
+border-radius:5px;
+box-sizing: border-box;
+}
+
+ .content{
+  width: 690rpx;   
+  margin: 30rpx;
+  vertical-align: middle;
+} 
+.my-poto , .robot-poto {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.my-poto {
+  float:right;
+}
+.robot-poto {
+  float:left;
+}
+.my-msg , .robot-msg {
+  position: relative;
+  min-height: 20px;
+  padding: 10px;
+  margin: 5px;
+  font-size:15px;
+  line-height:20px;
+  letter-spacing:1px;
+  word-break:break-all;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+.my-msg{
+  float:right;
+  background-color:#169bd5;
+}
+.robot-msg{
+  float:left;
+  background-color:#fff;
+}
+.robot-msg > view , .my-msg > view {
+  position: absolute;
+  top: 15px;
+  border-top: 5px solid rgba(255,255,255,0);
+  border-bottom: 5px solid rgba(255,255,255,0);
+}
+.robot-msg > view {
+  left: -10px;
+  border-right: 5px solid rgba(255,255,255,1);
+  border-left: 5px solid rgba(255,255,255,0);
+}
+.my-msg > view {
+  right: -10px;
+  border-right: 5px solid rgba(255,255,255,0);
+  border-left: 5px solid #169bd5;
+}
+
+.input_submit{
+    display: inline-block;
+    width:70%;
+    margin:20rpx 0 4rpx 40rpx;
+    background-color: #f0f0f0;
+    border-bottom:1px solid #888;
+}
+.input_submit + view{
+  display: inline-block;
+}
+.img_submit{
+  width:60rpx;
+  height:60rpx;
+  padding-left:60rpx;
+}
