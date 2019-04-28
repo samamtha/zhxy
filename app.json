@@ -3,7 +3,6 @@
     "pages/home/home",
     "pages/notice/notice",
     "pages/notice/content/content",
-    "pages/index/index",
     "pages/guide/guide",
     "pages/map/map",
     "pages/machine/machine",

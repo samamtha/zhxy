@@ -16,10 +16,10 @@ Page({
     inputValue: '',
     returnValue: '',
     allContentList: [],              // saving information here
-    key: '5a703aea44000069b2c21b07', //奇智机器人key
+    
     userInfo: {}
   },
-  //绑定键盘按下事件，讲输入的值赋给data
+  //绑定键盘按下事件，将输入的值赋给data
   bindKeyInput: function (e) {
     this.setData({
       inputValue: e.detail.value
@@ -73,7 +73,7 @@ Page({
       handleBoxBottom: 0,
     })
   },
-  //点击发送按钮时触发事件，发送数据给奇智机器人
+  //点击发送按钮时触发事件，发送数据给后台
   submitTo: function (e) {
     let that = this;
     //飞机变色（换图）
@@ -134,7 +134,7 @@ Page({
                 allContentList: that.data.allContentList
               })
               )
-          } else {//奇智返回答案为空
+          } else {//返回答案为空
             wx.showToast({
               title: '答案为空',
             })

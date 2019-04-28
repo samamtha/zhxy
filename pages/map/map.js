@@ -7,6 +7,7 @@ Page({
     firstTop:'',
     windowWidth:'',
     windowHeight:'',
+
     pxz:'',
     pyz:'',
     logs: [],
@@ -28,6 +29,7 @@ Page({
     pchangey:-532-146,
     cos:1238/1374,
     sin:596/1374,
+
     stv: {          //缩放
       distance: 0,  //两指距离
       scale: 1,     //缩放倍数
@@ -36,18 +38,18 @@ Page({
 
   //页面加载
   onLoad: function () {
-    var page = this;
-    page.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
-    })
+    // var page = this;
+    // page.setData({
+    //   logs: (wx.getStorageSync('logs') || []).map(log => {
+    //     return util.formatTime(new Date(log))
+    //   })
+    // })
 
     //获取手机屏幕大小
     wx.getSystemInfo({
       success: function (res) {
-        console.log("窗口可用宽度：" + res.windowWidth)
-        console.log("窗口可用高度：" + res.windowHeight)
+        //console.log("窗口可用宽度：" + res.windowWidth)
+        //console.log("窗口可用高度：" + res.windowHeight)
         page.setData({
           windowWidth: res.windowWidth,
           windowHeight: res.windowHeight

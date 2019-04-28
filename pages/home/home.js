@@ -26,7 +26,7 @@ Page({
     newsDetail:[],
     imgURLCommon: "https://www.zhxy.xyz/img/home/",
     imgSuffix: ".png",
-    picURLCommon: "https://www.zhxy.xyz/img/home/",
+    // picURLCommon: "https://www.zhxy.xyz/img/home/",
     picSuffix: ".jpg",
     barlist: [
       {
@@ -98,9 +98,10 @@ Page({
     for (var i = 0, len = list.length; i < len; ++i) {
       if (list[i].id == id) {
         list[i].highlight = true;
-      } else {
-        list[i].highlight = false;
-      }
+        break;
+      } //else {
+      //   list[i].highlight = false;
+      // }
     }
     this.setData({
       barlist: list
@@ -119,42 +120,41 @@ Page({
     });
   },
 
-  picTap: function (e) {
-    //console.log(e);
-    var id = e.currentTarget.id;
-    var picpop = this.data.picpop;
-    picpop.pop = true;
-    picpop.id = id;
+  // picTap: function (e) {
+  //   //console.log(e);
+  //   var id = e.currentTarget.id;
+  //   var picpop = this.data.picpop;
+  //   picpop.pop = true;
+  //   picpop.id = id;
     
-    this.setData({
-      picpop: picpop
-    });
-  },
+  //   this.setData({
+  //     picpop: picpop
+  //   });
+  // },
 
-  picpopTap: function (e) {
-    var picpop = this.data.picpop;
-    picpop.pop = false;
-    picpop.id = '';
+  // picpopTap: function (e) {
+  //   var picpop = this.data.picpop;
+  //   picpop.pop = false;
+  //   picpop.id = '';
 
-    this.setData({
-      picpop: picpop
-    })
-  },
+  //   this.setData({
+  //     picpop: picpop
+  //   })
+  // },
 
   toContent: function (e) {
     //console.log(e);
-
     var obj = this.data.newsDetail;
-    //console.log(this.data.newsDetail);
-    var url = '../notice/content/content';
-
-    url = url + '?title=' + obj.title + '&call=' + obj.call + '&date=' + obj.date + '&content=' + obj.content;
-
-    //console.log(url);
-
-    wx.navigateTo({
-      url: url
-    })
+    //console.log(obj.title);
+    if (obj.title != '暂时无最新消息'){
+      var url = '../notice/content/content';
+      url = url+'?title='+obj.title+'&call='+obj.call+'&date='+obj.date+'&content='+obj.content;
+      //console.log(url);
+      wx.navigateTo({
+        url: url
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面加载
@@ -200,10 +200,15 @@ Page({
       success: function (res) {
         //console.log(res.data[0].title);
         var temp = {};
-        temp.title = res.data[0].title;
-        temp.date = res.data[0].time;
-        temp.call = res.data[0].called;
-        temp.content = res.data[0].content;
+        //console.log(res.data[0])
+        if(res.data[0] == undefined){
+          temp.title = '暂时无最新消息';
+        }else{
+          temp.title = res.data[0].title;
+          temp.date = res.data[0].time;
+          temp.call = res.data[0].called;
+          temp.content = res.data[0].content;
+        }
         page.setData({
           newsDetail: temp
         })

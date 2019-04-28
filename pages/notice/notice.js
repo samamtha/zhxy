@@ -92,26 +92,13 @@ Page({
 
   toContent: function (e){
     //console.log(e);
-
     var obj = this.data.displaylist[e.currentTarget.id];
-
     var url = 'content/content';
-
-    url = url + '?title=' + obj.title + '&call=' + obj.call + '&date=' + obj.date + '&content=' + obj.content;
-
+    url = url+'?title='+obj.title+'&call='+obj.call+'&date='+obj.date+'&content='+obj.content;
     //console.log(url);
-
     wx.navigateTo({
       url: url
     })
-
-    //var index = e.currentTarget.id;
-
-    //console.log(this.data.displaylist[index]);
-
-    //var app = getApp();
-
-    //app.noticeData = this.data.displaylist[index];
   },
 
   /**

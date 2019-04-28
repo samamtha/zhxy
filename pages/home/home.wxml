@@ -35,13 +35,13 @@
       <view class="page-body-title">{{ body.title }}</view>
       <view class="page-body-text">{{ body.littleTitle }}</view>
       <view class="page-body-spacing">
-        <image wx:for-items="{{piclist}}" bind:tap="picTap" class="page-body-spacing-pic" src="{{picURLCommon + 'pic_' + item.id + picSuffix}}" id="{{item.id}}" wx:key></image>
+        <image wx:for-items="{{piclist}}" bind:tap="picTap" class="page-body-spacing-pic" src="{{imgURLCommon + 'pic_' + item.id + picSuffix}}" id="{{item.id}}" wx:key></image>
       </view>
       <view class="page-body-text">{{ body.appendInfo }}</view>
     </view>-->
   </view>
   
     <!-- picpop 
-    <image wx:if="{{ picpop.pop }}" class="picpop" src="{{picURLCommon + 'pic_' + picpop.id + picSuffix}}" bind:tap="picpopTap"></image> -->
+    <image wx:if="{{ picpop.pop }}" class="picpop" src="{{imgURLCommon + 'pic_' + picpop.id + picSuffix}}" bind:tap="picpopTap"></image> -->
 
 </view>
